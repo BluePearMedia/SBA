@@ -1,184 +1,207 @@
-import * as React from "react"
+import * as React from 'react';
+// import { Link } from 'gatsby';
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
+import Typography from '@material-ui/core/Typography';
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
+// import Hidden from '@material-ui/core/Hidden';
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
+// import AppBar from '@material-ui/core/AppBar';
+// import Toolbar from '@material-ui/core/Toolbar';
+import Grid from '@material-ui/core/Grid';
 
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
+import Box from '@material-ui/core/Box';
 
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
+import Startup from '../images/startup.svg';
+import Writing from '../images/writing.svg';
+import Calculator from '../images/calculator.svg';
+import Calendar from '../images/calendar.svg';
+import Cloud from '../images/cloud-computing.svg';
+import Payment from '../images/payment.svg';
 
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
+import Template from '../components/template/template';
 
 // markup
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
-  )
-}
+    <>
+      <main>
+        <Template home={true} title='Home Page'>
+          <Box mb={4}>
+            <Grid
+              container
+              className='text-align-center container services'
+              gutterBottom
+            >
+              <Grid item lg={2} md={4} sm={4} xs={6}>
+                <img src={Cloud} alt='cloud Accouting' />
+                <Typography variant='h6'>Cloud Accounting</Typography>
+              </Grid>
+              <Grid item lg={2} md={4} sm={4} xs={6} py={1}>
+                <img src={Calendar} alt='calendar' />
+                <Typography variant='h6'>Year End Accounts</Typography>
+              </Grid>
+              <Grid item lg={2} md={4} sm={4} xs={6}>
+                <img src={Writing} alt='Pen Writing' />
+                <Typography variant='h6'>Self Assessment</Typography>
+              </Grid>
+              <Grid item lg={2} md={4} sm={4} xs={6}>
+                <img src={Calculator} alt='Calculator' />
+                <Typography variant='h6'>Corporation Tax</Typography>
+              </Grid>
+              <Grid item lg={2} md={4} sm={4} xs={6}>
+                <img src={Payment} alt='VAT Payment' />
+                <Typography variant='h6'>VAT</Typography>
+              </Grid>
+              <Grid item lg={2} md={4} sm={4} xs={6}>
+                <img src={Startup} alt='Rocket' />
+                <Typography variant='h6'>Start Ups</Typography>
+              </Grid>
+            </Grid>
+          </Box>
 
-export default IndexPage
+          <Box
+            className='justify-between container'
+            display='flex'
+            flexDirection='row'
+            mb={4}
+            flexWrap='wrap'
+          >
+            <Box className='width-50 ' display='flex' flexDirection='column'>
+              <Typography variant='h4' gutterBottom>
+                About Us
+              </Typography>
+              <Typography variant='body1' paragraph>
+                Our firm expertly attends to all your taxation and business
+                needs. Thanks to our expertise, dedication and years of
+                experience in consulting and assessment, we can offer you
+                support that you can rely on.
+              </Typography>
+
+              <Typography variant='body1' paragraph>
+                We understand the importance of building close working
+                relationships with our clients so whether you are a Sole Trader,
+                Partnership or a small Limited Company, we can offer Year round
+                help & advice and provide tailor made Accountancy packages,
+                incorporating Year End Accounts Preparation, Self Assessment,
+                VAT and Taxation services to suit your needs.
+              </Typography>
+              <Typography variant='body1' paragraph>
+                Although we are Brighouse Accountants, we look after a diverse
+                range of clients in Huddersfield, Halifax, Bradford,
+                Cleckheaton, Mirfield and surrounding areas. We also have a
+                growing nationwide client base thanks to our versatile cloud
+                accounting bookkeeping solutions that enable us to work closely
+                with clients wherever they are.
+              </Typography>
+              <Typography variant='body1' paragraph>
+                From Trades People to Business and Healthcare Professionals,
+                Shop owners to Haulage Contractors and everything inbetween, our
+                clients run their Businesses safe in the knowledge that their
+                Accountant is taking care of all of their Accountancy and Tax
+                affairs.
+              </Typography>
+            </Box>
+            <Box className='width-50 ' display='flex' flexDirection='column'>
+              <Typography variant='h4' gutterBottom>
+                Our Guarantees
+              </Typography>
+              <Typography variant='body1' paragraph>
+                Our clients benefit from a high level of customer service and
+                can conduct their business safe in the knowledge that their Tax
+                affairs are in good hands. Here at Small Business Accountancy we
+                are proud to offer all of our clients the following guarantees:
+              </Typography>
+              <Box display='flex' flexDirection='column'>
+                <ul>
+                  <li>
+                    <Typography variant='body1' paragraph>
+                      Your fees will cover all services with no hidden extras
+                      for letters and telephone calls etc.
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography variant='body1' paragraph>
+                      All clients benefit from a one to one service with a
+                      designated Accountant who will manage their account and
+                      will always be available to offer help & advice and
+                      resolve any problems that may occur throughout the year.
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography variant='body1' paragraph>
+                      We will communicate directly with H M Revenue & Customs
+                      and Companies House on your behalf.
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography variant='body1' paragraph>
+                      We will file all accounts and returns on your behalf in a
+                      timely manner, avoiding any penalties and helping you to
+                      plan ahead for any Tax payable.
+                    </Typography>
+                  </li>
+                  <li>
+                    <Typography variant='body1' paragraph>
+                      All client information is treated as strictly
+                      confidential.
+                    </Typography>
+                  </li>
+                </ul>
+              </Box>
+            </Box>
+          </Box>
+
+          <Box mb={4}>
+            <Box display='flex' className='container '>
+              <Box className='speech-bubble speech-bubble-left'>
+                <Typography variant='h6' paragraph>
+                  Timothy Fee
+                </Typography>
+                <Typography variant='body1' paragraph>
+                  I have found James to be very professional and knowledgeable
+                  with a pleasant manner. He always reacts very promptly to any
+                  questions or issues I put to him. I would most certainly
+                  recommend him to anyone looking for a first class professional
+                  accountancy service.
+                </Typography>
+              </Box>
+            </Box>
+            <Box display='flex' className='container flex-right'>
+              <Box className='speech-bubble speech-bubble-right'>
+                <Typography variant='h6' paragraph>
+                  Carl Marsden
+                </Typography>
+                <Typography variant='body1' paragraph>
+                  Being relatively new to the world of running a business I
+                  needed an Accountant who would provide an affordable service
+                  that was beyond filling out paperwork. I'm happy to say that I
+                  knew within a couple of minutes of speaking with James that he
+                  was the man for the job. He's polite, friendly, efficient and
+                  helpful beyond the call of duty and I will be recommending him
+                  to any who ask.
+                </Typography>
+              </Box>
+            </Box>
+            <Box display='flex' className='container '>
+              <Box className='speech-bubble speech-bubble-left'>
+                <Typography variant='h6' paragraph>
+                  Jamie Thompson
+                </Typography>
+                <Typography variant='body1' paragraph>
+                  James first came to my home a couple of years ago, he was very
+                  professional and polite. He spent time talking through my
+                  paperwork and how he could help with my accounts. This is my
+                  2nd year with James and I am very happy with the high level of
+                  service I have received from him. I would definitely recommend
+                  him to anyone who is looking for an accountant.
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Template>
+      </main>
+    </>
+  );
+};
+
+export default IndexPage;

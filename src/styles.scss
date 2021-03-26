@@ -1,0 +1,151 @@
+$gradient: linear-gradient(225deg, #f8f8ff 0%, #dbdbf5 100%);
+
+.header,
+.footer {
+  background-image: $gradient;
+}
+
+// img {
+//   display: none;
+// }
+
+.container {
+  padding: 0 10rem;
+  @media (max-width: 1280px) {
+    padding: 0 3rem;
+  }
+
+  @media (max-width: 968px) {
+    padding: 0 0.5rem;
+  }
+}
+
+li {
+  margin-left: 1rem;
+}
+
+.justify- {
+  &end {
+    justify-content: flex-end;
+  }
+
+  &between {
+    justify-content: space-between;
+  }
+}
+
+.align-item-center {
+  align-items: center;
+}
+
+.right {
+  right: 0;
+}
+
+.width- {
+  &50 {
+    width: 47%;
+    @media (max-width: 968px) {
+      width: 100%;
+    }
+  }
+  &30 {
+    width: 32%;
+    @media (max-width: 968px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &70 {
+    width: 70%;
+    @media (max-width: 968px) {
+      width: 0%;
+      display: 'none';
+    }
+  }
+}
+
+.width .text-align-center {
+  text-align: center;
+}
+
+.hero {
+  height: 40rem;
+  width: 90%;
+}
+
+.navigation {
+  padding-right: 0;
+
+  h6 {
+    padding-left: 2rem;
+    font-size: 1.2rem;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+.flex-right {
+  justify-content: flex-end;
+}
+
+.services {
+  img {
+    width: 3rem;
+  }
+}
+
+.speech-bubble {
+  position: relative;
+  border-radius: 0.5em;
+  width: 90%;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
+  &-left {
+    background-image: linear-gradient(225deg, #dbdbf5 0%, #e9e9fc 100%);
+  }
+  &-right {
+    background-image: linear-gradient(225deg, #e9e9fc 0%, #dbdbf5 100%);
+  }
+}
+
+.speech-bubble-left:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border: 26px solid transparent;
+  border-top-color: #dbdbf5;
+  border-bottom: 0;
+  margin-left: -13px;
+  margin-bottom: -26px;
+  left: 5%;
+  border-left: 0;
+}
+
+.speech-bubble-right:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border: 26px solid transparent;
+  border-top-color: #dbdbf5;
+  border-bottom: 0;
+  margin-left: -13px;
+  margin-bottom: -26px;
+  right: 5%;
+  border-right: 0;
+}
