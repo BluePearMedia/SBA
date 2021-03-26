@@ -14,8 +14,6 @@ import Hero from '../../images/Hero.svg';
 
 import Helmets from '../helmet/helmets';
 
-import '../../styles.scss';
-
 // markup
 const Header = ({ home, title, subtitle }) => {
   return (
