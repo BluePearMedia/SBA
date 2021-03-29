@@ -89,7 +89,7 @@ const Footer = () => {
               src={FreeAgent}
               alt='Free Agent Expert'
               loading='lazy'
-              style={{ width: '15em', height: '3rem' }}
+              style={{ width: '15rem', aspectRatio: 4.96 / 1 }}
             />
           </Box>
           <Box className='width-30'>

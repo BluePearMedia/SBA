@@ -67,7 +67,7 @@ const IndexPage = () => {
             flexWrap='wrap'
           >
             <Box className='width-50 ' display='flex' flexDirection='column'>
-              <Typography variant='h4' gutterBottom>
+              <Typography variant='h4' align='center' gutterBottom>
                 About Us
               </Typography>
               <Typography variant='body1' paragraph>
@@ -102,7 +102,7 @@ const IndexPage = () => {
               </Typography>
             </Box>
             <Box className='width-50 ' display='flex' flexDirection='column'>
-              <Typography variant='h4' gutterBottom>
+              <Typography variant='h4' align='center' gutterBottom>
                 Our Guarantees
               </Typography>
               <Typography variant='body1' paragraph>
