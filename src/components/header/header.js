@@ -49,12 +49,12 @@ const Header = ({ home, title, subtitle }) => {
                 display='flex'
                 flexDirection='column'
                 className='width-30'
-                justifyContent='center '
+                justifyContent='center'
               >
                 <Typography variant='h3' component='h1'>
                   Small Business Accountancy
                 </Typography>
-                <Typography variant='subtitle1' gutterBottom>
+                <Typography variant='subtitle1' component='p' gutterBottom>
                   Welcome to Small Business Accountancy - Accountants providing
                   complete cost effective Accountancy Solutions for small
                   businesses in Brighouse, Huddersfield, Halifax and surrounding
