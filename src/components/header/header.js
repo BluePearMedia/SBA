@@ -51,7 +51,9 @@ const Header = ({ home, title, subtitle }) => {
                 className='width-30'
                 justifyContent='center '
               >
-                <Typography variant='h3'>Small Business Accountancy</Typography>
+                <Typography variant='h3' component='h1'>
+                  Small Business Accountancy
+                </Typography>
                 <Typography variant='subtitle1' gutterBottom>
                   Welcome to Small Business Accountancy - Accountants providing
                   complete cost effective Accountancy Solutions for small
