@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
 
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
@@ -20,7 +21,7 @@ const Footer = () => {
         pt={2}
       >
         <Box className='width-30'>
-          <Typography variant='h6' paragraph>
+          <Typography variant='h6' paragraph component='h3'>
             Contact Us
           </Typography>
           {[
@@ -30,18 +31,18 @@ const Footer = () => {
             'West Yorkshire',
             'HD6 3BP',
           ].map((text, index) => (
-            <Typography variant='body1' paragraph key={index}>
+            <Typography variant='body1' component='p' paragraph key={index}>
               {text}
             </Typography>
           ))}
 
-          <Typography variant='body1' paragraph>
+          <Typography variant='body1' component='p' paragraph>
             <strong>Tel:</strong> 01484 718048
           </Typography>
-          <Typography variant='body1' paragraph>
+          <Typography variant='body1' component='p' paragraph>
             <strong>Mobile:</strong>: 07732 540842
           </Typography>
-          <Typography variant='body1' paragraph>
+          <Typography variant='body1' component='p' paragraph>
             <strong>E-mail:</strong> info@small-business-accountancy.co.uk
           </Typography>
         </Box>
@@ -58,23 +59,33 @@ const Footer = () => {
         </Box>
 
         <Box className='width-30'>
-          <Typography variant='h6' paragraph>
+          <Typography variant='h6' component='h3' paragraph>
             Useful Links
           </Typography>
-          <Typography variant='body1' paragraph>
-            Facebook
+          <Typography variant='body1' component='p' paragraph>
+            <a href='https://www.facebook.com/small.business.accountancy?pnref=story'>
+              Facebook
+            </a>
           </Typography>
-          <Typography variant='body1' paragraph>
-            HM Revenue and Customs
+          <Typography variant='body1' component='p' paragraph>
+            <a href='https://www.gov.uk/government/organisations/hm-revenue-customs'>
+              HM Revenue and Customs
+            </a>
           </Typography>
-          <Typography variant='body1' paragraph>
-            Companies House
+          <Typography variant='body1' component='p' paragraph>
+            <a href='https://www.britishchambers.org.uk/'>
+              British Chambers of Commerce
+            </a>
           </Typography>
-          <Typography variant='body1' paragraph>
-            Hadfield Travel
+          <Typography variant='body1' component='p' paragraph>
+            <a href='https://www.gov.uk/government/organisations/companies-house'>
+              Companies House
+            </a>
           </Typography>
-          <Typography variant='body1' paragraph>
-            British Chambers of Commerce
+          <Typography variant='body1' component='p' paragraph>
+            <a href='https://hadfieldtravelalloccasiontravel.business.site/?utm_source=gmb&utm_medium=referral'>
+              Hadfield Travel
+            </a>
           </Typography>
         </Box>
         <Box
@@ -110,7 +121,7 @@ const Footer = () => {
           </Box>
         </Box>
         <Box display='flex' style={{ width: '100%' }} justifyContent='center'>
-          <Typography variant='body1' paragraph>
+          <Typography variant='body1' component='p' paragraph>
             Website by BluePearMedia
           </Typography>
         </Box>

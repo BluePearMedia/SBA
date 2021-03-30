@@ -57,10 +57,15 @@ const Services = () => {
           >
             {service.map((s) => (
               <Box className='width-50 ' display='flex' flexDirection='column'>
-                <Typography variant='h4' gutterBottom>
+                <Typography
+                  variant='h4'
+                  gutterBottom
+                  component='h2'
+                  align='center'
+                >
                   {s.name}
                 </Typography>
-                <Typography variant='body1' paragraph>
+                <Typography variant='body1' paragraph component='p'>
                   {s.description}
                 </Typography>
               </Box>

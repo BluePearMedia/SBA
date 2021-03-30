@@ -25,7 +25,7 @@ const IndexPage = () => {
   return (
     <>
       <main>
-        <Template home={true} title='Home Page'>
+        <Template home={true} title='Home'>
           <Box mb={4}>
             <Grid
               container
@@ -34,27 +34,39 @@ const IndexPage = () => {
             >
               <Grid item lg={2} md={4} sm={4} xs={6}>
                 <img src={Cloud} alt='cloud Accouting' />
-                <Typography variant='h6'>Cloud Accounting</Typography>
+                <Typography variant='h6' component='p'>
+                  Cloud Accounting
+                </Typography>
               </Grid>
               <Grid item lg={2} md={4} sm={4} xs={6} py={1}>
                 <img src={Calendar} alt='calendar' />
-                <Typography variant='h6'>Year End Accounts</Typography>
+                <Typography variant='h6' component='p'>
+                  Year End Accounts
+                </Typography>
               </Grid>
               <Grid item lg={2} md={4} sm={4} xs={6}>
                 <img src={Writing} alt='Pen Writing' />
-                <Typography variant='h6'>Self Assessment</Typography>
+                <Typography variant='h6' component='p'>
+                  Self Assessment
+                </Typography>
               </Grid>
               <Grid item lg={2} md={4} sm={4} xs={6}>
                 <img src={Calculator} alt='Calculator' />
-                <Typography variant='h6'>Corporation Tax</Typography>
+                <Typography variant='h6' component='p'>
+                  Corporation Tax
+                </Typography>
               </Grid>
               <Grid item lg={2} md={4} sm={4} xs={6}>
                 <img src={Payment} alt='VAT Payment' />
-                <Typography variant='h6'>VAT</Typography>
+                <Typography variant='h6' component='p'>
+                  VAT
+                </Typography>
               </Grid>
               <Grid item lg={2} md={4} sm={4} xs={6}>
                 <img src={Startup} alt='Rocket' />
-                <Typography variant='h6'>Start Ups</Typography>
+                <Typography variant='h6' component='p'>
+                  Start Ups
+                </Typography>
               </Grid>
             </Grid>
           </Box>
@@ -67,17 +79,22 @@ const IndexPage = () => {
             flexWrap='wrap'
           >
             <Box className='width-50 ' display='flex' flexDirection='column'>
-              <Typography variant='h4' align='center' gutterBottom>
+              <Typography
+                variant='h4'
+                align='center'
+                component='h2'
+                gutterBottom
+              >
                 About Us
               </Typography>
-              <Typography variant='body1' paragraph>
+              <Typography variant='body1' paragraph component='p'>
                 Our firm expertly attends to all your taxation and business
                 needs. Thanks to our expertise, dedication and years of
                 experience in consulting and assessment, we can offer you
                 support that you can rely on.
               </Typography>
 
-              <Typography variant='body1' paragraph>
+              <Typography variant='body1' paragraph component='p'>
                 We understand the importance of building close working
                 relationships with our clients so whether you are a Sole Trader,
                 Partnership or a small Limited Company, we can offer Year round
@@ -85,7 +102,7 @@ const IndexPage = () => {
                 incorporating Year End Accounts Preparation, Self Assessment,
                 VAT and Taxation services to suit your needs.
               </Typography>
-              <Typography variant='body1' paragraph>
+              <Typography variant='body1' paragraph component='p'>
                 Although we are Brighouse Accountants, we look after a diverse
                 range of clients in Huddersfield, Halifax, Bradford,
                 Cleckheaton, Mirfield and surrounding areas. We also have a
@@ -93,7 +110,7 @@ const IndexPage = () => {
                 accounting bookkeeping solutions that enable us to work closely
                 with clients wherever they are.
               </Typography>
-              <Typography variant='body1' paragraph>
+              <Typography variant='body1' paragraph component='p'>
                 From Trades People to Business and Healthcare Professionals,
                 Shop owners to Haulage Contractors and everything inbetween, our
                 clients run their Businesses safe in the knowledge that their
@@ -102,10 +119,15 @@ const IndexPage = () => {
               </Typography>
             </Box>
             <Box className='width-50 ' display='flex' flexDirection='column'>
-              <Typography variant='h4' align='center' gutterBottom>
+              <Typography
+                variant='h4'
+                component='h2'
+                align='center'
+                gutterBottom
+              >
                 Our Guarantees
               </Typography>
-              <Typography variant='body1' paragraph>
+              <Typography variant='body1' paragraph component='p'>
                 Our clients benefit from a high level of customer service and
                 can conduct their business safe in the knowledge that their Tax
                 affairs are in good hands. Here at Small Business Accountancy we
@@ -114,13 +136,13 @@ const IndexPage = () => {
               <Box display='flex' flexDirection='column'>
                 <ul>
                   <li>
-                    <Typography variant='body1' paragraph>
+                    <Typography variant='body1' paragraph component='p'>
                       Your fees will cover all services with no hidden extras
                       for letters and telephone calls etc.
                     </Typography>
                   </li>
                   <li>
-                    <Typography variant='body1' paragraph>
+                    <Typography variant='body1' paragraph component='p'>
                       All clients benefit from a one to one service with a
                       designated Accountant who will manage their account and
                       will always be available to offer help & advice and
@@ -128,20 +150,20 @@ const IndexPage = () => {
                     </Typography>
                   </li>
                   <li>
-                    <Typography variant='body1' paragraph>
+                    <Typography variant='body1' paragraph component='p'>
                       We will communicate directly with H M Revenue & Customs
                       and Companies House on your behalf.
                     </Typography>
                   </li>
                   <li>
-                    <Typography variant='body1' paragraph>
+                    <Typography variant='body1' paragraph component='p'>
                       We will file all accounts and returns on your behalf in a
                       timely manner, avoiding any penalties and helping you to
                       plan ahead for any Tax payable.
                     </Typography>
                   </li>
                   <li>
-                    <Typography variant='body1' paragraph>
+                    <Typography variant='body1' paragraph component='p'>
                       All client information is treated as strictly
                       confidential.
                     </Typography>
@@ -154,10 +176,10 @@ const IndexPage = () => {
           <Box mb={4}>
             <Box display='flex' className='container '>
               <Box className='speech-bubble speech-bubble-left'>
-                <Typography variant='h6' paragraph>
+                <Typography variant='h6' paragraph component='p'>
                   Timothy Fee
                 </Typography>
-                <Typography variant='body1' paragraph>
+                <Typography variant='body1' paragraph component='p'>
                   I have found James to be very professional and knowledgeable
                   with a pleasant manner. He always reacts very promptly to any
                   questions or issues I put to him. I would most certainly
@@ -168,10 +190,10 @@ const IndexPage = () => {
             </Box>
             <Box display='flex' className='container flex-right'>
               <Box className='speech-bubble speech-bubble-right'>
-                <Typography variant='h6' paragraph>
+                <Typography variant='h6' paragraph component='p'>
                   Carl Marsden
                 </Typography>
-                <Typography variant='body1' paragraph>
+                <Typography variant='body1' paragraph component='p'>
                   Being relatively new to the world of running a business I
                   needed an Accountant who would provide an affordable service
                   that was beyond filling out paperwork. I'm happy to say that I
@@ -184,10 +206,10 @@ const IndexPage = () => {
             </Box>
             <Box display='flex' className='container '>
               <Box className='speech-bubble speech-bubble-left'>
-                <Typography variant='h6' paragraph>
+                <Typography variant='h6' paragraph component='p'>
                   Jamie Thompson
                 </Typography>
-                <Typography variant='body1' paragraph>
+                <Typography variant='body1' paragraph component='p'>
                   James first came to my home a couple of years ago, he was very
                   professional and polite. He spent time talking through my
                   paperwork and how he could help with my accounts. This is my

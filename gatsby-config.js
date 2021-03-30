@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'acc',
-    siteUrl: 'https://flamboyant-jones-ebac02.netlify.app',
+    siteUrl: 'https://cranky-sinoussi-0b4038.netlify.app',
   },
   plugins: [
     'gatsby-plugin-sass',

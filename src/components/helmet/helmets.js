@@ -1,15 +1,17 @@
 import * as React from 'react';
 
 import Helmet from 'react-helmet';
+import Pig from '../../images/Pig.svg';
 
 // markup
 const Helmets = ({ title }) => {
   return (
     <>
       <Helmet>
-        <title>{title}</title>
+        <title>{title} | Small Business Accountancy</title>
         <html lang='en' />
         <meta charset='UTF-8' />
+        <link rel='icon' href={Pig} />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta name='author' content='Small Business Accountancy' />
         <meta

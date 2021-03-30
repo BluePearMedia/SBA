@@ -63,10 +63,11 @@ const Contact = () => {
               flexDirection='column'
               justifyContent='space-between'
             >
-              <Typography variant='h4'>Contact Details</Typography>
-              <Typography variant='body1'>
-                For enquiries or to request an appointment please contact us at
-                :
+              <Typography variant='h4' component='h2'>
+                Contact Details
+              </Typography>
+              <Typography variant='body1' component='p'>
+                For enquiries or to request an appointment please contact us at:
               </Typography>
               <Box>
                 {[
@@ -76,25 +77,25 @@ const Contact = () => {
                   'West Yorkshire',
                   'HD6 3BP',
                 ].map((text, index) => (
-                  <Typography variant='body1' key={index}>
+                  <Typography variant='body1' component='p' key={index}>
                     {text}
                   </Typography>
                 ))}
               </Box>
               <Box>
-                <Typography variant='body1'>
+                <Typography variant='body1' component='p'>
                   <strong>Tel:</strong> 01484 718048
                 </Typography>
-                <Typography variant='body1'>
+                <Typography variant='body1' component='p'>
                   <strong>Mobile:</strong>: 07732 540842
                 </Typography>
-                <Typography variant='body1'>
+                <Typography variant='body1' component='p'>
                   <strong>E-mail:</strong> info@small-business-accountancy.co.uk
                 </Typography>
               </Box>
             </Box>
             <Box className='width-50 ' display='flex' flexDirection='column'>
-              <Typography variant='body1' paragraph>
+              <Typography variant='body1' paragraph component='p'>
                 Alternativly, leave your contact details below and we will get
                 back to you as soon as possible.
               </Typography>
@@ -131,7 +132,12 @@ const Contact = () => {
                   variant='outlined'
                 />
                 <br />
-                <Button type='submit' variant='outlined'>
+                <Button
+                  type='submit'
+                  variant='outlined'
+                  name='submit'
+                  aria-label='Submit Form'
+                >
                   Send
                 </Button>
               </form>

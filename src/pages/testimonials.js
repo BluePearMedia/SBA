@@ -52,10 +52,10 @@ const Testimonials = () => {
               index % 2 === 0 ? (
                 <Box display='flex' className='container '>
                   <Box className='speech-bubble speech-bubble-left'>
-                    <Typography variant='h6' paragraph>
+                    <Typography variant='h6' paragraph component='p'>
                       {f.name}
                     </Typography>
-                    <Typography variant='body1' paragraph>
+                    <Typography variant='body1' paragraph component='p'>
                       {f.feedback}
                     </Typography>
                   </Box>
@@ -63,10 +63,10 @@ const Testimonials = () => {
               ) : (
                 <Box display='flex' className='container flex-right'>
                   <Box className='speech-bubble speech-bubble-right'>
-                    <Typography variant='h6' paragraph>
+                    <Typography variant='h6' paragraph component='p'>
                       {f.name}
                     </Typography>
-                    <Typography variant='body1' paragraph>
+                    <Typography variant='body1' paragraph component='p'>
                       {f.feedback}
                     </Typography>
                   </Box>

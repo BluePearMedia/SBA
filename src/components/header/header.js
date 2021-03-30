@@ -61,10 +61,10 @@ const Header = ({ home, title, subtitle }) => {
                   areas.
                 </Typography>
 
-                <Typography variant='subtitle1'>
+                <Typography variant='subtitle1' component='p'>
                   Call now for a free consultation
                 </Typography>
-                <Typography variant='body1'>
+                <Typography variant='body1' component='p'>
                   <strong>01484 718048</strong>
                 </Typography>
               </Box>
@@ -91,8 +91,12 @@ const Header = ({ home, title, subtitle }) => {
               justifyContent='center '
               textAlign='center'
             >
-              <Typography variant='h3'>{title}</Typography>
-              <Typography variant='subtitle1'>{subtitle}</Typography>
+              <Typography variant='h3' component='h1'>
+                {title}
+              </Typography>
+              <Typography variant='subtitle1' component='p'>
+                {subtitle}
+              </Typography>
             </Box>
           )}
         </Box>
