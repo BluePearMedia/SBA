@@ -7,7 +7,7 @@ import Template from '../components/template/template';
 
 const service = [
   {
-    name: 'Cloud Accounting Bookkeeping Packages',
+    name: 'Cloud Accounting Bookkeeping',
     description:
       'Simplify your bookkeeping with convenient, user friendly software solutions. Integrate bank feeds to import transactions from your online bank and credit card accounts, create sales invoices and record expenses on the go via a smartphone app and dramatically reduce the amount of time spent on admin. The versatility of the software means that we can work with you in real time from anywhere in the country. Get in touch to discuss how we can help to make life that little bit easier for you.',
   },
